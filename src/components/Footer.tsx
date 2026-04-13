@@ -6,9 +6,6 @@ export function Footer() {
       <p className="text-sm text-navy-400">
         &copy; {year} Sebastian Donoso. All rights reserved.
       </p>
-      <p className="text-xs text-navy-500 mt-2">
-        Built with React, TypeScript & Tailwind CSS
-      </p>
     </footer>
   )
 }
