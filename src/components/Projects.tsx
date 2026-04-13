@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { ExternalLink, Monitor, FileText, BarChart3, Play } from 'lucide-react'
-import { GithubIcon } from './icons'
 import { projects, type Project } from '../data/resume'
 import { VideoModal } from './VideoModal'
 
@@ -176,10 +175,6 @@ function ProjectCard({
             Live Demo
           </a>
         )}
-        <a href="#" className="flex items-center gap-1.5 text-xs font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)]">
-          <GithubIcon size={12} />
-          Source Code {/* mock */}
-        </a>
       </div>
     </div>
   )

@@ -6,7 +6,7 @@ export const personalInfo = {
   email: "sdonosopm@gmail.com",
   phone: "+569 7620 3147",
   linkedin: "www.linkedin.com/in/sebasti%C3%A1n-donoso-p%C3%A9rez-55915931",
-  github: "github.com/sdonosopm", // mock
+
   summary: `Senior investment professional with 8+ years of experience in portfolio management and asset allocation. Proven track record overseeing multi-asset portfolios for UHNW clients, with strong expertise in investment strategy, fund selection, and performance analysis. Highly analytical and disciplined, with a commercial acumen and strong interest in artificial intelligence implementation for wealth management. Bilingual in English and Spanish. U.S. residency in process.`,
 }
 
