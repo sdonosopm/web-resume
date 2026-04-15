@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ExternalLink, Monitor, FileText, BarChart3, Play } from 'lucide-react'
+import { Monitor, FileText, BarChart3, Play } from 'lucide-react'
 import { projects, type Project } from '../data/resume'
 import { VideoModal } from './VideoModal'
 
