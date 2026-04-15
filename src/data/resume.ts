@@ -122,7 +122,7 @@ export const projects: Project[] = [
     highlights: ["White-label platform for MFOs and end clients", "Portfolio analytics: TWR, IRR, Sharpe & drawdown", "Dashboards for Admins, Advisors & Clients", "Rebalancing engine & tax-loss harvesting", "Real assets, structured notes & direct indexing modules", "Bilingual (English & Spanish) with encrypted client data"],
     hasDemo: true,
     demoPath: "/demos/wealthplat",
-    videoId: "", // TODO: Paste YouTube video ID here once uploaded
+    videoId: "TZBEmNfXvws",
   },
   {
     title: "Chilean Investment Funds Universe",

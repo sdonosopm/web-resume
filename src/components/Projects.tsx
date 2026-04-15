@@ -116,9 +116,15 @@ function ProjectCard({
         </div>
         {project.hasDemo && (
           <div className="absolute top-3 left-3 z-20">
-            <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-green-500/20 text-green-300 backdrop-blur-sm">
-              {hasVideo ? 'Video Demo' : 'Demo Available'}
-            </span>
+            {hasVideo ? (
+              <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-green-500/20 text-green-300 backdrop-blur-sm">
+                Video Demo
+              </span>
+            ) : (
+              <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-amber-500/20 text-amber-300 backdrop-blur-sm">
+                Demo Soon
+              </span>
+            )}
           </div>
         )}
       </div>
