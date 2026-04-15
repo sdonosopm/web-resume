@@ -172,15 +172,6 @@ function ProjectCard({
             Watch Demo
           </button>
         )}
-        {project.hasDemo && project.demoPath && (
-          <a
-            href={project.demoPath}
-            className="flex items-center gap-1.5 text-xs font-medium text-[var(--accent-light)] hover:underline"
-          >
-            <ExternalLink size={12} />
-            Live Demo
-          </a>
-        )}
       </div>
     </div>
   )
