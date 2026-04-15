@@ -119,7 +119,7 @@ export const projects: Project[] = [
     description: "Production-grade reporting platform for wealth management with portfolio analytics, holdings tracking, financial calculations (TWR, IRR, Sharpe), role-based dashboards, and encrypted client data management.",
     tech: ["React 18", "TypeScript", "Flask", "PostgreSQL", "Tailwind CSS", "shadcn/ui", "Recharts", "Docker"],
     category: "web-app",
-    highlights: ["31 pages with role-based access", "Dark mode & i18n (EN/ES)", "Fernet encryption for PII", "AI assistant integration"],
+    highlights: ["White-label platform for MFOs and end clients", "Portfolio analytics: TWR, IRR, Sharpe, drawdown", "Role-based dashboards (Admin, Advisor, Client)", "Rebalancing engine & tax-loss harvesting", "Real assets, structured notes & direct indexing modules", "Dark mode, i18n (EN/ES) & Fernet encryption for PII"],
     hasDemo: true,
     demoPath: "/demos/wealthplat",
     videoId: "", // TODO: Paste YouTube video ID here once uploaded
@@ -129,7 +129,7 @@ export const projects: Project[] = [
     description: "Real-time monitoring platform for Chilean investment funds. Fetches daily NAV data from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, tracks 72 funds with 159K+ records, and provides professional analytics dashboards with premium/discount analysis.",
     tech: ["React 19", "TypeScript", "FastAPI", "SQLite", "Tailwind CSS", "Recharts", "Radix UI"],
     category: "web-app",
-    highlights: ["72 funds tracked with daily data", "NAV vs Bolsa spread analysis", "Bollinger bands & trading signals", "Order generation with email drafts"],
+    highlights: ["72 funds tracked with daily NAV data from CMF", "NAV vs Bolsa Electrónica spread & premium/discount analysis", "Bollinger bands, moving averages & trading signals", "Fund comparison with base-100 normalization", "Order generation with limit prices & email drafts", "Historical data explorer with 159K+ records"],
     hasDemo: true,
     demoPath: "/demos/moneda-nav",
     videoId: "", // TODO: Paste YouTube video ID here once uploaded
@@ -139,7 +139,7 @@ export const projects: Project[] = [
     description: "Replicable fixed-income indices for the Chilean bond market — sovereign (BTP, BTU) and corporate (AAA to BBB) — built entirely with public data from Banco Central, CMF, and Bolsa de Santiago.",
     tech: ["React", "TypeScript", "Recharts", "Python", "Banco Central API", "CMF Data"],
     category: "research",
-    highlights: ["12 indices (sovereign + corporate by rating)", "Transparent DCF pricing methodology", "10+ years of daily data", "Yield curves, drawdowns & duration analysis"],
+    highlights: ["12 indices: sovereign (BTP, BTU) & corporate (AAA to BBB)", "Transparent DCF pricing with public data", "10+ years of daily data from Banco Central & CMF", "Yield curve construction & duration analysis", "Drawdown tracking & risk metrics by rating", "Benchmark tool for Chilean fixed income portfolios"],
     hasDemo: true,
     demoPath: "/demos/fixed-income",
     videoId: "", // TODO: Paste YouTube video ID here once uploaded
