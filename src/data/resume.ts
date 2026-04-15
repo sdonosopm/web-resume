@@ -117,7 +117,7 @@ export const projects: Project[] = [
   {
     title: "WealthPlat — Multi-Family Office Platform",
     description: "White-label reporting platform for Multi-Family Offices and their end clients. Consolidates portfolios across custodians, tracks holdings, calculates performance metrics (TWR, IRR, Sharpe), and delivers role-based dashboards for advisors and clients.",
-    tech: ["React 18", "TypeScript", "Flask", "PostgreSQL", "Tailwind CSS", "shadcn/ui", "Recharts", "Docker"],
+    tech: ["Wealth Management", "Portfolio Analytics", "Multi-Custodian", "White Label", "Reporting", "Compliance"],
     category: "web-app",
     highlights: ["White-label platform for MFOs and end clients", "Portfolio analytics: TWR, IRR, Sharpe & drawdown", "Dashboards for Admins, Advisors & Clients", "Rebalancing engine & tax-loss harvesting", "Real assets, structured notes & direct indexing modules", "Bilingual (English & Spanish) with encrypted client data"],
     hasDemo: true,
@@ -127,7 +127,7 @@ export const projects: Project[] = [
   {
     title: "Chilean Investment Funds Universe",
     description: "Monitoring platform for the Chilean investment fund market. Sources daily NAV data from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, covering 72 funds with 159K+ records and professional analytics dashboards.",
-    tech: ["React 19", "TypeScript", "FastAPI", "SQLite", "Tailwind CSS", "Recharts", "Radix UI"],
+    tech: ["Fund Analytics", "CMF Data", "Bolsa Electrónica", "NAV Tracking", "Trading Signals", "Market Data"],
     category: "web-app",
     highlights: ["72 funds tracked with daily NAV data from CMF", "NAV vs Bolsa Electrónica premium/discount analysis", "Bollinger bands, moving averages & trading signals", "Fund comparison with base-100 normalization", "Order generation with limit prices & email drafts", "159K+ historical records across all funds"],
     hasDemo: true,
@@ -137,7 +137,7 @@ export const projects: Project[] = [
   {
     title: "Chilean Fixed Income Index",
     description: "Replicable fixed-income indices for the Chilean bond market — sovereign (BTP, BTU) and corporate (AAA to BBB) — constructed entirely with public data from Banco Central, CMF, and Bolsa de Santiago.",
-    tech: ["React", "TypeScript", "Recharts", "Python", "Banco Central API", "CMF Data"],
+    tech: ["Fixed Income", "Bond Indices", "Yield Curves", "Banco Central", "CMF", "Risk Metrics"],
     category: "research",
     highlights: ["12 indices covering sovereign & corporate bonds by rating", "Transparent pricing methodology with public data", "10+ years of daily data from Banco Central & CMF", "Yield curve construction & duration analysis", "Drawdown tracking & risk metrics by credit rating", "Benchmark tool for Chilean fixed income portfolios"],
     hasDemo: true,
