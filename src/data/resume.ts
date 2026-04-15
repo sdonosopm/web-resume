@@ -116,30 +116,30 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "WealthPlat — Multi-Family Office Platform",
-    description: "Production-grade reporting platform for wealth management with portfolio analytics, holdings tracking, financial calculations (TWR, IRR, Sharpe), role-based dashboards, and encrypted client data management.",
+    description: "White-label reporting platform for Multi-Family Offices and their end clients. Consolidates portfolios across custodians, tracks holdings, calculates performance metrics (TWR, IRR, Sharpe), and delivers role-based dashboards for advisors and clients.",
     tech: ["React 18", "TypeScript", "Flask", "PostgreSQL", "Tailwind CSS", "shadcn/ui", "Recharts", "Docker"],
     category: "web-app",
-    highlights: ["White-label platform for MFOs and end clients", "Portfolio analytics: TWR, IRR, Sharpe, drawdown", "Role-based dashboards (Admin, Advisor, Client)", "Rebalancing engine & tax-loss harvesting", "Real assets, structured notes & direct indexing modules", "Dark mode, i18n (EN/ES) & Fernet encryption for PII"],
+    highlights: ["White-label platform for MFOs and end clients", "Portfolio analytics: TWR, IRR, Sharpe & drawdown", "Dashboards for Admins, Advisors & Clients", "Rebalancing engine & tax-loss harvesting", "Real assets, structured notes & direct indexing modules", "Bilingual (English & Spanish) with encrypted client data"],
     hasDemo: true,
     demoPath: "/demos/wealthplat",
     videoId: "", // TODO: Paste YouTube video ID here once uploaded
   },
   {
     title: "Chilean Investment Funds Universe",
-    description: "Real-time monitoring platform for Chilean investment funds. Fetches daily NAV data from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, tracks 72 funds with 159K+ records, and provides professional analytics dashboards with premium/discount analysis.",
+    description: "Monitoring platform for the Chilean investment fund market. Sources daily NAV data from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, covering 72 funds with 159K+ records and professional analytics dashboards.",
     tech: ["React 19", "TypeScript", "FastAPI", "SQLite", "Tailwind CSS", "Recharts", "Radix UI"],
     category: "web-app",
-    highlights: ["72 funds tracked with daily NAV data from CMF", "NAV vs Bolsa Electrónica spread & premium/discount analysis", "Bollinger bands, moving averages & trading signals", "Fund comparison with base-100 normalization", "Order generation with limit prices & email drafts", "Historical data explorer with 159K+ records"],
+    highlights: ["72 funds tracked with daily NAV data from CMF", "NAV vs Bolsa Electrónica premium/discount analysis", "Bollinger bands, moving averages & trading signals", "Fund comparison with base-100 normalization", "Order generation with limit prices & email drafts", "159K+ historical records across all funds"],
     hasDemo: true,
     demoPath: "/demos/moneda-nav",
     videoId: "", // TODO: Paste YouTube video ID here once uploaded
   },
   {
     title: "Chilean Fixed Income Index",
-    description: "Replicable fixed-income indices for the Chilean bond market — sovereign (BTP, BTU) and corporate (AAA to BBB) — built entirely with public data from Banco Central, CMF, and Bolsa de Santiago.",
+    description: "Replicable fixed-income indices for the Chilean bond market — sovereign (BTP, BTU) and corporate (AAA to BBB) — constructed entirely with public data from Banco Central, CMF, and Bolsa de Santiago.",
     tech: ["React", "TypeScript", "Recharts", "Python", "Banco Central API", "CMF Data"],
     category: "research",
-    highlights: ["12 indices: sovereign (BTP, BTU) & corporate (AAA to BBB)", "Transparent DCF pricing with public data", "10+ years of daily data from Banco Central & CMF", "Yield curve construction & duration analysis", "Drawdown tracking & risk metrics by rating", "Benchmark tool for Chilean fixed income portfolios"],
+    highlights: ["12 indices covering sovereign & corporate bonds by rating", "Transparent pricing methodology with public data", "10+ years of daily data from Banco Central & CMF", "Yield curve construction & duration analysis", "Drawdown tracking & risk metrics by credit rating", "Benchmark tool for Chilean fixed income portfolios"],
     hasDemo: true,
     demoPath: "/demos/fixed-income",
     videoId: "", // TODO: Paste YouTube video ID here once uploaded
