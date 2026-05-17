@@ -119,10 +119,10 @@ export const projects: Project[] = [
     description: "White-label reporting platform for Multi-Family Offices and their end clients. Consolidates portfolios across custodians, tracks holdings, calculates performance metrics (TWR, IRR, Sharpe), and delivers role-based dashboards for advisors and clients.",
     tech: ["Wealth Management", "Portfolio Analytics", "Multi-Custodian", "White Label", "Reporting", "Compliance"],
     category: "web-app",
-    highlights: ["White-label platform for MFOs and end clients", "Portfolio analytics: TWR, IRR, Sharpe & drawdown", "Dashboards for Admins, Advisors & Clients", "Rebalancing engine & tax-loss harvesting", "Real assets, structured notes & direct indexing modules", "Bilingual (English & Spanish) with encrypted client data"],
+    highlights: ["White-label platform for MFOs and end clients", "Portfolio analytics: TWR, IRR, Sharpe & drawdown", "Dashboards for Admins, Advisors & Clients", "Tax-loss harvesting", "Real assets & direct indexing modules", "Bilingual (English & Spanish) with encrypted client data"],
     hasDemo: true,
     demoPath: "/demos/wealthplat",
-    videoId: "TZBEmNfXvws",
+    videoId: "",
   },
   {
     title: "Chilean Investment Funds Universe",
