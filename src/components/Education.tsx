@@ -1,5 +1,6 @@
 import { GraduationCap, Award, Trophy } from 'lucide-react'
 import { education, certifications, awards } from '../data/resume'
+import { BackToTop } from './BackToTop'
 
 export function Education() {
   return (
@@ -89,8 +90,13 @@ export function Education() {
                       </span>
                     </div>
                     <p className="text-sm text-[var(--accent-light)] font-medium mt-1.5">{award.event}</p>
+                    {award.scale && (
+                      <span className="inline-block mt-2 px-2.5 py-1 text-[11px] font-semibold rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20">
+                        🏆 {award.scale}
+                      </span>
+                    )}
                     {award.project && (
-                      <p className="text-xs text-[var(--text-muted)] mt-1">Project: {award.project}</p>
+                      <p className="text-xs text-[var(--text-muted)] mt-2">Project: {award.project}</p>
                     )}
                     {award.detail && (
                       <p className="text-sm text-[var(--text-secondary)] mt-2">{award.detail}</p>
@@ -102,6 +108,7 @@ export function Education() {
           </div>
         )}
       </div>
+      <BackToTop />
     </section>
   )
 }

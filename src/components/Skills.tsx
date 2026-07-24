@@ -1,4 +1,5 @@
 import { skills } from '../data/resume'
+import { BackToTop } from './BackToTop'
 
 export function Skills() {
   return (
@@ -34,6 +35,7 @@ export function Skills() {
           ))}
         </div>
       </div>
+      <BackToTop />
     </section>
   )
 }

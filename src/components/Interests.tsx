@@ -1,5 +1,6 @@
 import { Footprints, Medal, Mountain, Bike, Volleyball, Piano, Waves, MapPin, Calendar, Trophy } from 'lucide-react'
 import { disciplines, otherInterests, type Discipline, type Interest } from '../data/resume'
+import { BackToTop } from './BackToTop'
 
 const disciplineIconMap: Record<Discipline['icon'], typeof Footprints> = {
   spartan: Trophy,
@@ -111,6 +112,7 @@ export function Interests() {
           })}
         </div>
       </div>
+      <BackToTop />
     </section>
   )
 }

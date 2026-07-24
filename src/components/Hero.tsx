@@ -1,9 +1,19 @@
 import { MapPin, ArrowDown } from 'lucide-react'
 import { personalInfo } from '../data/resume'
 
+const sectionLinks = [
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#education', label: 'Education' },
+  { href: '#interests', label: 'Beyond Work' },
+  { href: '#contact', label: 'Contact' },
+]
+
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+    <section id="top" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 dark:from-navy-950 dark:via-[#0a1929] dark:to-navy-900" />
 
@@ -50,6 +60,22 @@ export function Hero() {
           >
             Get in Touch
           </a>
+        </div>
+
+        {/* Direct quick-nav to every section */}
+        <div className="mt-8">
+          <p className="text-xs uppercase tracking-wider text-navy-400 mb-3">Jump to section</p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {sectionLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="px-4 py-1.5 rounded-full border border-white/15 bg-white/5 text-navy-200 text-sm font-medium hover:bg-white/10 hover:text-white hover:border-white/30 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
 
         <a

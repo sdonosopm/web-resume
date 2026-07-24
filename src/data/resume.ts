@@ -125,7 +125,7 @@ export const projects: Project[] = [
     videoId: "",
   },
   {
-    title: "All-in-One Investment Platform",
+    title: "International Investment Platform",
     description: "End-to-end investment management platform that consolidates multi-asset portfolios by integrating custody data from Pershing (the custodian of Bank of New York). Unifies portfolio management, rebalancing, and interactive reporting into a single interface.",
     tech: ["Portfolio Management", "Pershing Integration", "Rebalancing", "Interactive Reporting", "Multi-Asset", "Data Automation"],
     category: "web-app",
@@ -199,6 +199,7 @@ export interface AwardItem {
   category: string
   event: string
   project?: string
+  scale?: string
   detail?: string
 }
 
@@ -207,9 +208,10 @@ export const awards: AwardItem[] = [
   {
     place: "3rd Place",
     category: "Data Analysis",
-    event: "BCI Innovation Contest",
-    project: "Plataforma de Inversiones (All-in-One)",
-    detail: "Selected among the finalists in the Data Analysis category for an all-in-one investment platform.",
+    event: "BCI — Artificial Intelligence Use Cases Contest",
+    project: "International Investment Platform",
+    scale: "1 of 12 winning projects · 100+ applications",
+    detail: "Selected as one of the 12 winning projects out of 100+ applications in BCI's Artificial Intelligence use-cases contest, standing out for impact and innovation. Awarded 3rd place in the Data Analysis category for the International Investment Platform, which integrates custody data from Pershing (the custodian of Bank of New York).",
   },
 ]
 

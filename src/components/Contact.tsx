@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Mail, MapPin, Phone, Send, X } from 'lucide-react'
 import { LinkedinIcon } from './icons'
 import { personalInfo } from '../data/resume'
+import { BackToTop } from './BackToTop'
 
 export function Contact() {
   const [showForm, setShowForm] = useState(false)
@@ -164,6 +165,7 @@ export function Contact() {
           </div>
         </div>
       )}
+      <BackToTop />
     </section>
   )
 }

@@ -1,5 +1,6 @@
 import { personalInfo } from '../data/resume'
 import { TrendingUp, Code2, Users, LineChart } from 'lucide-react'
+import { BackToTop } from './BackToTop'
 
 const highlights = [
   { icon: TrendingUp, label: 'Investment Analysis', desc: 'Portfolio management & Top-Down research' },
@@ -38,6 +39,7 @@ export function About() {
           ))}
         </div>
       </div>
+      <BackToTop />
     </section>
   )
 }

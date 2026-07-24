@@ -1,5 +1,6 @@
 import { Briefcase, MapPin } from 'lucide-react'
 import { experience } from '../data/resume'
+import { BackToTop } from './BackToTop'
 
 export function Experience() {
   return (
@@ -57,6 +58,7 @@ export function Experience() {
           </div>
         </div>
       </div>
+      <BackToTop />
     </section>
   )
 }

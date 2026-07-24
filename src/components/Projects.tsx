@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Monitor, FileText, BarChart3, Play } from 'lucide-react'
 import { projects, type Project } from '../data/resume'
 import { VideoModal } from './VideoModal'
+import { BackToTop } from './BackToTop'
 
 const categoryIcons = {
   'web-app': Monitor,
@@ -64,6 +65,8 @@ export function Projects() {
           ))}
         </div>
       </div>
+
+      <BackToTop />
 
       {activeVideo && (
         <VideoModal
