@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Moon, Sun, Menu, X, Download } from 'lucide-react'
+import { useState, useRef, useEffect } from 'react'
+import { Moon, Sun, Menu, X, Download, ChevronDown } from 'lucide-react'
 
 interface NavbarProps {
   isDark: boolean
@@ -15,6 +15,61 @@ const navLinks = [
   { href: '#interests', label: 'Beyond Work' },
   { href: '#contact', label: 'Contact' },
 ]
+
+const resumeOptions = [
+  { href: '/Sebastian_Donoso_Resume.pdf', label: 'English', sublabel: 'Resume (EN)' },
+  { href: '/Sebastian_Donoso_CV_Espanol.pdf', label: 'Español', sublabel: 'CV (ES)' },
+]
+
+function ResumeButton({ full = false }: { full?: boolean }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [])
+
+  return (
+    <div ref={ref} className={`relative ${full ? 'w-full' : ''}`}>
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-[var(--accent)] text-white hover:opacity-90 transition-opacity ${full ? 'w-full justify-center' : ''}`}
+      >
+        <Download size={14} />
+        Resume PDF
+        <ChevronDown size={14} className={`transition-transform ${open ? 'rotate-180' : ''}`} />
+      </button>
+
+      {open && (
+        <div
+          role="menu"
+          className={`absolute ${full ? 'left-0 right-0' : 'right-0'} mt-2 min-w-[180px] rounded-lg border border-[var(--border-color)] bg-[var(--bg-secondary)] shadow-lg overflow-hidden z-50`}
+        >
+          {resumeOptions.map((opt) => (
+            <a
+              key={opt.href}
+              href={opt.href}
+              download
+              role="menuitem"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2 px-4 py-2.5 text-sm text-[var(--text-primary)] hover:bg-[var(--bg-tertiary)] transition-colors"
+            >
+              <Download size={14} className="text-[var(--accent)]" />
+              <span className="font-medium">{opt.label}</span>
+              <span className="ml-auto text-xs text-[var(--text-secondary)]">{opt.sublabel}</span>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export function Navbar({ isDark, toggleDark }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -48,14 +103,9 @@ export function Navbar({ isDark, toggleDark }: NavbarProps) {
             {isDark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
 
-          <a
-            href="/Sebastian_Donoso_Resume.pdf"
-            download
-            className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-[var(--accent)] text-white hover:opacity-90 transition-opacity"
-          >
-            <Download size={14} />
-            Resume PDF
-          </a>
+          <div className="hidden md:block">
+            <ResumeButton />
+          </div>
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -79,14 +129,9 @@ export function Navbar({ isDark, toggleDark }: NavbarProps) {
               {link.label}
             </a>
           ))}
-          <a
-            href="/Sebastian_Donoso_Resume.pdf"
-            download
-            className="mt-2 inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-[var(--accent)] text-white"
-          >
-            <Download size={14} />
-            Resume PDF
-          </a>
+          <div className="mt-3">
+            <ResumeButton full />
+          </div>
         </div>
       )}
     </nav>

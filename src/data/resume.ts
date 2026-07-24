@@ -7,7 +7,7 @@ export const personalInfo = {
   phone: "+569 7620 3147",
   linkedin: "www.linkedin.com/in/sebasti%C3%A1n-donoso-p%C3%A9rez-55915931",
 
-  summary: `Senior investment professional with 8+ years of experience in portfolio management and asset allocation. Proven track record overseeing multi-asset portfolios for UHNW clients, with strong expertise in investment strategy, fund selection, and performance analysis. Highly analytical and disciplined, with a commercial acumen and strong interest in artificial intelligence implementation for wealth management. Bilingual in English and Spanish. U.S. residency in process.`,
+  summary: `Senior investment professional with 8+ years of experience in portfolio management and asset allocation. Proven track record overseeing multi-asset portfolios for UHNW clients, with strong expertise in investment strategy, fund selection, and performance analysis. Highly analytical and disciplined, with a commercial acumen and strong knowledge in AI consulting and implementation for wealth management. Bilingual in English and Spanish. U.S. residency in process.`,
 }
 
 export interface Experience {
@@ -30,7 +30,7 @@ export const experience: Experience[] = [
       "Executed and oversaw global multi-asset investment portfolio strategies, aligned with defined risk and return objectives. Achieved total annual return of 24.3% in US Sectors Portfolio vs 17.9% S&P 500 in 2025.",
       "Co-led portfolio construction, rebalancing and optimization through top-down asset allocation and fund selection. Designed a quantitative fixed-income model to rank sectors and guide portfolio positioning.",
       "Conduct in-depth global markets and sectors analysis to support investment decisions and strategic portfolio adjustments.",
-      "Designed and implemented internal reporting and rebalancing tools, improving efficiency, transparency, and decision-making. Automated tasks, reducing execution time by 50–70%.",
+      "Designed and implemented an end-to-end investment platform featuring advanced portfolio management, rebalancing, and interactive reporting tools to enhance transparency and client experience. Time-savings by 80%.",
       "Prepared and presented portfolio reviews and market outlooks to internal teams and clients. Authored over 40 high-value investment proposals in 2025.",
     ],
   },
@@ -41,7 +41,7 @@ export const experience: Experience[] = [
     period: "Jun 2021 — Mar 2023",
     location: "Santiago, Chile",
     bullets: [
-      "Led the implementation of house view portfolio strategies through J.P. Morgan and UBS platforms, acting as primary point of contact with global counterparts, managing over USD $50M. The team, over USD $2BN.",
+      "Led the implementation of house view portfolio strategies through J.P. Morgan and UBS platforms, acting as primary point of contact with global counterparts, managing over USD $50M. The team, over USD $3BN.",
       "Member of the investment committee on global strategy definition, and multi-asset product approval.",
       "Managed the design and development of portfolios across operational, strategic, and commercial dimensions.",
       "Developed platform-level P&L, asset consolidation processes, and alternative assets reporting.",
@@ -57,7 +57,7 @@ export const experience: Experience[] = [
     bullets: [
       "Managed client investment portfolios, covering multi-asset and alternative strategies with a ROE of 1.5%.",
       "Executed and analyzed investments in funds, equities, ETFs, FX, structured notes, bonds, and derivatives.",
-      "Built and managed relationships with UHNW clients, contributing to the growth of USD 60MM in AUM.",
+      "Built and managed relationships with UHNW clients, contributing to the growth of USD 50MM in AUM.",
       "Provided strategic investment advice supported by macroeconomic and market analysis.",
     ],
   },
@@ -80,15 +80,15 @@ export interface Skill {
 export const skills: Skill[] = [
   {
     category: "Financial Systems",
-    items: ["Bloomberg", "Bloomberg BQuant", "Pershing", "Morningstar", "Sebra", "J.P. Morgan Platform", "UBS Platform", "Microsoft Office (Advanced)", "Google Workspace (Advanced)"],
+    items: ["Bloomberg", "Pershing", "Morningstar", "Sebra", "Microsoft Office", "Google Workspace"],
   },
   {
     category: "Data & AI",
-    items: ["Python (Advanced)", "SQL", "Advanced Excel (VBA/Modeling)", "Prompt Engineering", "LLMs & Software Development"],
+    items: ["Software Development & Prompt Engineering for LLMs", "Python", "SQL", "Advanced Excel (VBA/Modeling)"],
   },
   {
-    category: "Programming & Frameworks",
-    items: ["Python", "React", "TypeScript", "Tailwind CSS", "Next.js", "Vite", "Flask", "FastAPI", "Streamlit", "VS Code", "Google Apps Script", "Google Colab"],
+    category: "Software Dev",
+    items: ["React", "TypeScript", "Next.js", "Tailwind", "Python (FastAPI/Flask/Streamlit)", "Google Apps Script", "Vercel"],
   },
   {
     category: "Investment Expertise",
@@ -122,6 +122,24 @@ export const projects: Project[] = [
     highlights: ["White-label platform for MFOs and end clients", "Portfolio analytics: TWR, IRR, Sharpe & drawdown", "Dashboards for Admins, Advisors & Clients", "Tax-loss harvesting", "Real assets & direct indexing modules", "Bilingual (English & Spanish) with encrypted client data"],
     hasDemo: true,
     demoPath: "/demos/wealthplat",
+    videoId: "",
+  },
+  {
+    title: "All-in-One Investment Platform",
+    description: "End-to-end investment management platform that consolidates multi-asset portfolios by integrating custody data from Pershing (the custodian of Bank of New York). Unifies portfolio management, rebalancing, and interactive reporting into a single interface.",
+    tech: ["Portfolio Management", "Pershing Integration", "Rebalancing", "Interactive Reporting", "Multi-Asset", "Data Automation"],
+    category: "web-app",
+    highlights: ["Direct integration with Pershing custody data (Bank of New York)", "Advanced portfolio management & automated rebalancing", "Interactive reporting for advisors and clients", "Consolidated multi-asset positions across accounts", "End-to-end workflow from data ingestion to reporting", "Reduced manual processing time by up to 80%"],
+    hasDemo: false,
+    videoId: "",
+  },
+  {
+    title: "Real Estate Deal Intelligence Platform",
+    description: "All-in-one platform for real estate investment: deal sourcing and commercial pipeline, underwriting with cap-rate and CAPEX modeling, investor CRM, property inventory, and auto-generated investment memos — all feeding management dashboards.",
+    tech: ["Real Estate", "Underwriting", "Deal Pipeline", "Investor CRM", "Cap Rate Modeling", "Investment Memos"],
+    category: "web-app",
+    highlights: ["Deal sourcing & commercial pipeline tracking", "Underwriting engine: cap rate, CAPEX, equity & debt assumptions", "Investor CRM with commercial funnel", "Property inventory across houses, apartments & buildings", "Auto-generated investment memos", "Management dashboards with portfolio-level metrics"],
+    hasDemo: false,
     videoId: "",
   },
   {
@@ -174,6 +192,25 @@ export const certifications: Certification[] = [
   },
 
   { name: "Python Certificate — University of Pennsylvania" },
+]
+
+export interface AwardItem {
+  place: string
+  category: string
+  event: string
+  project?: string
+  detail?: string
+}
+
+// Website-only recognition (not included in the downloadable resume PDF).
+export const awards: AwardItem[] = [
+  {
+    place: "3rd Place",
+    category: "Data Analysis",
+    event: "BCI Innovation Contest",
+    project: "Plataforma de Inversiones (All-in-One)",
+    detail: "Selected among the finalists in the Data Analysis category for an all-in-one investment platform.",
+  },
 ]
 
 export interface Race {
