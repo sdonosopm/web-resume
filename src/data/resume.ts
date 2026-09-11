@@ -27,7 +27,7 @@ export const experience: Experience[] = [
     period: "Mar 2023 — Present",
     location: "Santiago, Chile",
     bullets: [
-      "Designed and implemented an end-to-end investment platform featuring advanced portfolio management, rebalancing, and interactive reporting tools to enhance transparency and client experience. Time-savings by 80%.",
+      "Designed and implemented an end-to-end investment platform featuring advanced portfolio management, rebalancing, and interactive reporting tools to enhance transparency and client experience. Time-savings by 80%. Awarded 3rd place among 150+ applicants.",
       "Executed and oversaw global multi-asset investment portfolio strategies, aligned with defined risk and return objectives. Achieved total annual return of 24.3% in US Sectors Portfolio vs 17.9% S&P 500 in 2025.",
       "Co-led portfolio construction, rebalancing and optimization through top-down asset allocation and fund selection. Designed a quantitative fixed-income model to rank sectors and guide portfolio positioning.",
       "Conduct in-depth global markets and sectors analysis to support investment decisions and strategic portfolio adjustments.",
@@ -230,8 +230,8 @@ export const awards: AwardItem[] = [
     category: "Data Analysis",
     event: "BCI — Artificial Intelligence Use Cases Contest",
     project: "International Investment Platform",
-    scale: "1 of 12 winning projects · 100+ applications",
-    detail: "Selected as one of the 12 winning projects out of 100+ applications in BCI's Artificial Intelligence use-cases contest, standing out for impact and innovation. Awarded 3rd place in the Data Analysis category for the International Investment Platform, which integrates custody data from Pershing (the custodian of Bank of New York).",
+    scale: "1 of 12 winning projects · 150+ applicants",
+    detail: "Selected as one of the 12 winning projects out of 150+ applicants in BCI's Artificial Intelligence use-cases contest, standing out for impact and innovation. Awarded 3rd place in the Data Analysis category for the International Investment Platform, which integrates custody data from Pershing (the custodian of Bank of New York).",
   },
 ]
 
