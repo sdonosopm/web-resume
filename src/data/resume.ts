@@ -27,10 +27,10 @@ export const experience: Experience[] = [
     period: "Mar 2023 — Present",
     location: "Santiago, Chile",
     bullets: [
+      "Designed and implemented an end-to-end investment platform featuring advanced portfolio management, rebalancing, and interactive reporting tools to enhance transparency and client experience. Time-savings by 80%.",
       "Executed and oversaw global multi-asset investment portfolio strategies, aligned with defined risk and return objectives. Achieved total annual return of 24.3% in US Sectors Portfolio vs 17.9% S&P 500 in 2025.",
       "Co-led portfolio construction, rebalancing and optimization through top-down asset allocation and fund selection. Designed a quantitative fixed-income model to rank sectors and guide portfolio positioning.",
       "Conduct in-depth global markets and sectors analysis to support investment decisions and strategic portfolio adjustments.",
-      "Designed and implemented an end-to-end investment platform featuring advanced portfolio management, rebalancing, and interactive reporting tools to enhance transparency and client experience. Time-savings by 80%.",
       "Prepared and presented portfolio reviews and market outlooks to internal teams and clients. Authored over 40 high-value investment proposals in 2025.",
     ],
   },
@@ -100,11 +100,13 @@ export const skills: Skill[] = [
   },
 ]
 
+export type ProjectCategory = "finance" | "real-estate" | "other"
+
 export interface Project {
   title: string
   description: string
   tech: string[]
-  category: "web-app" | "research" | "data"
+  categories: ProjectCategory[]
   highlights: string[]
   hasDemo: boolean
   demoPath?: string
@@ -118,7 +120,7 @@ export const projects: Project[] = [
     title: "WealthPlat — Multi-Family Office Platform",
     description: "White-label reporting platform for Multi-Family Offices and their end clients. Consolidates portfolios across custodians, tracks holdings, calculates performance metrics (TWR, IRR, Sharpe), and delivers role-based dashboards for advisors and clients.",
     tech: ["Wealth Management", "Portfolio Analytics", "Multi-Custodian", "White Label", "Reporting", "Compliance"],
-    category: "web-app",
+    categories: ["finance"],
     highlights: ["White-label platform for MFOs and end clients", "Portfolio analytics: TWR, IRR, Sharpe & drawdown", "Dashboards for Admins, Advisors & Clients", "Tax-loss harvesting", "Real assets & direct indexing modules", "Bilingual (English & Spanish) with encrypted client data"],
     hasDemo: true,
     demoPath: "/demos/wealthplat",
@@ -128,35 +130,8 @@ export const projects: Project[] = [
     title: "International Investment Platform",
     description: "End-to-end investment management platform that consolidates multi-asset portfolios by integrating custody data from Pershing (the custodian of Bank of New York). Unifies portfolio management, rebalancing, and interactive reporting into a single interface.",
     tech: ["Portfolio Management", "Pershing Integration", "Rebalancing", "Interactive Reporting", "Multi-Asset", "Data Automation"],
-    category: "web-app",
+    categories: ["finance"],
     highlights: ["Direct integration with Pershing custody data (Bank of New York)", "Advanced portfolio management & automated rebalancing", "Interactive reporting for advisors and clients", "Consolidated multi-asset positions across accounts", "End-to-end workflow from data ingestion to reporting", "Reduced manual processing time by up to 80%"],
-    hasDemo: false,
-    videoId: "",
-  },
-  {
-    title: "Real Estate Deal Intelligence Platform",
-    description: "All-in-one platform for real estate investment serving both retail and institutional investors: deal sourcing and commercial pipeline, underwriting with cap-rate and CAPEX modeling, investor CRM, property inventory, and auto-generated investment memos — all feeding management dashboards.",
-    tech: ["Real Estate", "Retail & Institutional", "Underwriting", "Deal Pipeline", "Investor CRM", "Cap Rate Modeling"],
-    category: "web-app",
-    highlights: ["Dual solution for retail and institutional investors", "Deal sourcing & commercial pipeline tracking", "Underwriting engine: cap rate, CAPEX, equity & debt assumptions", "Investor CRM with commercial funnel", "Auto-generated investment memos", "Management dashboards with portfolio-level metrics"],
-    hasDemo: false,
-    videoId: "",
-  },
-  {
-    title: "Autonomous AI Agent — Finance & Real Estate",
-    description: "Voice-driven autonomous agent that converses, retrieves data, and executes actions on its own — powered by an LLM with connected tools (MCPs), persistent memory, and a spoken-confirmation gate before anything that sends or modifies data. A single solution that plugs into different verticals, currently deployed across the financial and real estate industries.",
-    tech: ["Autonomous Agent", "Voice AI", "Agent Orchestration", "MCP Tools", "Finance", "Real Estate"],
-    category: "web-app",
-    highlights: ["Autonomous agent: converses, retrieves data & executes actions by voice", "Connected tools (email, calendar, market data) with persistent memory & context", "Read actions run automatically; sends or edits gated by spoken confirmation", "Finance: portfolio & market queries, briefings, and proposal/reporting support", "Real estate: deal pipeline, underwriting figures & investor follow-ups on demand", "Vertical-agnostic core — the same agent integrates into a new industry"],
-    hasDemo: false,
-    videoId: "",
-  },
-  {
-    title: "Pub Plat — Restaurant & Pub Chain Management",
-    description: "Centralized operations platform for restaurant and pub chains. Brings menu profitability, inventory & waste, sales and cash reconciliation, purchasing, staff scheduling, and customer loyalty into a single multi-location dashboard with intelligent alerts.",
-    tech: ["Restaurant Ops", "Multi-Location", "Menu Profitability", "Inventory & Waste", "POS & Sales", "React/TypeScript"],
-    category: "web-app",
-    highlights: ["Multi-venue switcher for chain-wide or per-location view", "Menu profitability & food-cost analysis", "Inventory & waste (mermas) control", "Sales, cash reconciliation & purchasing/suppliers", "Staff & shift planning", "Customer loyalty with an intelligent alerts dashboard"],
     hasDemo: false,
     videoId: "",
   },
@@ -164,17 +139,44 @@ export const projects: Project[] = [
     title: "Chilean Investment Funds Universe",
     description: "Monitoring platform for the Chilean investment fund market. Sources daily NAV data from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, covering 72 funds with 159K+ records and professional analytics dashboards.",
     tech: ["Fund Analytics", "CMF Data", "Bolsa Electrónica", "NAV Tracking", "Trading Signals", "Market Data"],
-    category: "web-app",
+    categories: ["finance"],
     highlights: ["72 funds tracked with daily NAV data from CMF", "NAV vs Bolsa Electrónica premium/discount analysis", "Bollinger bands, moving averages & trading signals", "Fund comparison with base-100 normalization", "Order generation with limit prices & email drafts", "159K+ historical records across all funds"],
     hasDemo: true,
     demoPath: "/demos/moneda-nav",
     videoId: "", // TODO: Paste YouTube video ID here once uploaded
   },
   {
+    title: "Autonomous AI Agent — Finance & Real Estate",
+    description: "Voice-driven autonomous agent that converses, retrieves data, and executes actions on its own — powered by an LLM with connected tools (MCPs), persistent memory, and a spoken-confirmation gate before anything that sends or modifies data. A single solution that plugs into different verticals, currently deployed across the financial and real estate industries.",
+    tech: ["Autonomous Agent", "Voice AI", "Agent Orchestration", "MCP Tools", "Finance", "Real Estate"],
+    categories: ["finance", "real-estate"],
+    highlights: ["Autonomous agent: converses, retrieves data & executes actions by voice", "Connected tools (email, calendar, market data) with persistent memory & context", "Read actions run automatically; sends or edits gated by spoken confirmation", "Finance: portfolio & market queries, briefings, and proposal/reporting support", "Real estate: deal pipeline, underwriting figures & investor follow-ups on demand", "Vertical-agnostic core — the same agent integrates into a new industry"],
+    hasDemo: false,
+    videoId: "",
+  },
+  {
+    title: "Real Estate Deal Intelligence Platform",
+    description: "All-in-one platform for real estate investment serving both retail and institutional investors: deal sourcing and commercial pipeline, underwriting with cap-rate and CAPEX modeling, investor CRM, property inventory, and auto-generated investment memos — all feeding management dashboards.",
+    tech: ["Real Estate", "Retail & Institutional", "Underwriting", "Deal Pipeline", "Investor CRM", "Cap Rate Modeling"],
+    categories: ["real-estate"],
+    highlights: ["Dual solution for retail and institutional investors", "Deal sourcing & commercial pipeline tracking", "Underwriting engine: cap rate, CAPEX, equity & debt assumptions", "Investor CRM with commercial funnel", "Auto-generated investment memos", "Management dashboards with portfolio-level metrics"],
+    hasDemo: false,
+    videoId: "",
+  },
+  {
+    title: "Pub Plat — Restaurant & Pub Chain Management",
+    description: "Centralized operations platform for restaurant and pub chains. Brings menu profitability, inventory & waste, sales and cash reconciliation, purchasing, staff scheduling, and customer loyalty into a single multi-location dashboard with intelligent alerts.",
+    tech: ["Restaurant Ops", "Multi-Location", "Menu Profitability", "Inventory & Waste", "POS & Sales", "React/TypeScript"],
+    categories: ["other"],
+    highlights: ["Multi-venue switcher for chain-wide or per-location view", "Menu profitability & food-cost analysis", "Inventory & waste (mermas) control", "Sales, cash reconciliation & purchasing/suppliers", "Staff & shift planning", "Customer loyalty with an intelligent alerts dashboard"],
+    hasDemo: false,
+    videoId: "",
+  },
+  {
     title: "Chilean Fixed Income Index",
     description: "Replicable fixed-income indices for the Chilean bond market — sovereign (BTP, BTU) and corporate (AAA to BBB) — constructed entirely with public data from Banco Central, CMF, and Bolsa de Santiago.",
     tech: ["Fixed Income", "Bond Indices", "Yield Curves", "Banco Central", "CMF", "Risk Metrics"],
-    category: "research",
+    categories: ["finance"],
     highlights: ["12 indices covering sovereign & corporate bonds by rating", "Transparent pricing methodology with public data", "10+ years of daily data from Banco Central & CMF", "Yield curve construction & duration analysis", "Drawdown tracking & risk metrics by credit rating", "Benchmark tool for Chilean fixed income portfolios"],
     hasDemo: true,
     demoPath: "/demos/fixed-income",

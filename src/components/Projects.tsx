@@ -1,28 +1,28 @@
 import { useState } from 'react'
-import { Monitor, FileText, BarChart3, Play } from 'lucide-react'
-import { projects, type Project } from '../data/resume'
+import { LineChart, Building2, LayoutGrid, Play } from 'lucide-react'
+import { projects, type Project, type ProjectCategory } from '../data/resume'
 import { VideoModal } from './VideoModal'
 import { BackToTop } from './BackToTop'
 
 const categoryIcons = {
-  'web-app': Monitor,
-  research: FileText,
-  data: BarChart3,
+  finance: LineChart,
+  'real-estate': Building2,
+  other: LayoutGrid,
 }
 
 const categoryLabels = {
-  'web-app': 'Web Application',
-  research: 'Research',
-  data: 'Data Analysis',
+  finance: 'Finance',
+  'real-estate': 'Real Estate',
+  other: 'Others',
 }
 
-const filters = ['all', 'web-app', 'research', 'data'] as const
+const filters = ['all', 'finance', 'real-estate', 'other'] as const
 
 export function Projects() {
   const [filter, setFilter] = useState<string>('all')
   const [activeVideo, setActiveVideo] = useState<{ id: string; title: string } | null>(null)
 
-  const filtered = filter === 'all' ? projects : projects.filter((p) => p.category === filter)
+  const filtered = filter === 'all' ? projects : projects.filter((p) => p.categories.includes(filter as ProjectCategory))
 
   return (
     <section id="projects" className="py-24 px-6 bg-[var(--bg-secondary)]">
@@ -34,7 +34,7 @@ export function Projects() {
           Featured Projects
         </h3>
         <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-          A selection of finance and technology projects showcasing full-stack development, data analysis, and financial research.
+          A selection of platforms I've built across finance, real estate, and other industries.
         </p>
 
         {/* Filter tabs */}
@@ -86,7 +86,7 @@ function ProjectCard({
   project: Project
   onPlayVideo: (videoId: string, title: string) => void
 }) {
-  const Icon = categoryIcons[project.category]
+  const Icon = categoryIcons[project.categories[0]]
   const hasVideo = Boolean(project.videoId)
 
   return (
@@ -114,7 +114,7 @@ function ProjectCard({
 
         <div className="absolute top-3 right-3 z-20">
           <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-white/10 text-navy-200 backdrop-blur-sm">
-            {categoryLabels[project.category]}
+            {project.categories.map((c) => categoryLabels[c]).join(' · ')}
           </span>
         </div>
         {project.hasDemo && (
