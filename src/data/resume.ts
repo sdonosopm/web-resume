@@ -117,7 +117,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "WealthPlat — Multi-Family Office Platform",
+    title: "Multi-Family Office Platform",
     description: "White-label reporting platform for Multi-Family Offices and their end clients. Consolidates portfolios across custodians, tracks holdings, calculates performance metrics (TWR, IRR, Sharpe), and delivers role-based dashboards for advisors and clients.",
     tech: ["Wealth Management", "Portfolio Analytics", "Multi-Custodian", "White Label", "Reporting", "Compliance"],
     categories: ["finance"],
@@ -136,7 +136,7 @@ export const projects: Project[] = [
     videoId: "",
   },
   {
-    title: "Chilean Investment Funds Universe",
+    title: "Chilean Investment Fund Platform",
     description: "Monitoring platform for the Chilean investment fund market. Sources daily NAV data from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, covering 72 funds with 159K+ records and professional analytics dashboards.",
     tech: ["Fund Analytics", "CMF Data", "Bolsa Electrónica", "NAV Tracking", "Trading Signals", "Market Data"],
     categories: ["finance"],
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     videoId: "", // TODO: Paste YouTube video ID here once uploaded
   },
   {
-    title: "Autonomous AI Agent — Finance & Real Estate",
+    title: "Autonomous AI Agent",
     description: "Voice-driven autonomous agent that converses, retrieves data, and executes actions on its own — powered by an LLM with connected tools (MCPs), persistent memory, and a spoken-confirmation gate before anything that sends or modifies data. A single solution that plugs into different verticals, currently deployed across the financial and real estate industries.",
     tech: ["Autonomous Agent", "Voice AI", "Agent Orchestration", "MCP Tools", "Finance", "Real Estate"],
     categories: ["finance", "real-estate"],

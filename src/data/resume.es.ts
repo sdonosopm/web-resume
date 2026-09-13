@@ -76,7 +76,7 @@ export const resumeEs: ResumeData = {
 
   projects: [
     {
-      title: "WealthPlat — Plataforma para Multi-Family Offices",
+      title: "Plataforma para Multi-Family Offices",
       description: "Plataforma de reportería white-label para Multi-Family Offices y sus clientes finales. Consolida portafolios entre custodios, monitorea posiciones, calcula métricas de desempeño (TWR, IRR, Sharpe) y entrega dashboards por rol para asesores y clientes.",
       tech: ["Wealth Management", "Analítica de Portafolios", "Multi-Custodio", "White Label", "Reportería", "Compliance"],
       categories: ["finance"],
@@ -95,7 +95,7 @@ export const resumeEs: ResumeData = {
       videoId: "",
     },
     {
-      title: "Universo de Fondos de Inversión Chilenos",
+      title: "Plataforma de Fondos de Inversión Chilenos",
       description: "Plataforma de monitoreo del mercado de fondos de inversión chileno. Obtiene datos diarios de valor cuota (NAV) desde la CMF (Comisión para el Mercado Financiero) y precios de la Bolsa Electrónica de Chile, cubriendo 72 fondos con más de 159K registros y dashboards analíticos profesionales.",
       tech: ["Analítica de Fondos", "Datos CMF", "Bolsa Electrónica", "Seguimiento NAV", "Señales de Trading", "Datos de Mercado"],
       categories: ["finance"],
@@ -105,7 +105,7 @@ export const resumeEs: ResumeData = {
       videoId: "",
     },
     {
-      title: "Agente de IA Autónomo — Finanzas e Inmobiliario",
+      title: "Agente de IA Autónomo",
       description: "Agente autónomo por voz que conversa, consulta datos y ejecuta acciones por sí mismo — impulsado por un LLM con herramientas conectadas (MCPs), memoria persistente y confirmación hablada antes de cualquier acción que envíe o modifique datos. Una sola solución que se integra a distintas verticales, hoy desplegada en las industrias financiera e inmobiliaria.",
       tech: ["Agente Autónomo", "IA por Voz", "Orquestación de Agentes", "Herramientas MCP", "Finanzas", "Inmobiliario"],
       categories: ["finance", "real-estate"],
