@@ -1,15 +1,17 @@
-import { skills } from '../data/resume'
 import { BackToTop } from './BackToTop'
+import { useResume, useT } from '../i18n'
 
 export function Skills() {
+  const { skills } = useResume()
+  const t = useT()
   return (
     <section id="skills" className="py-24 px-6 bg-[var(--bg-primary)]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-light)] mb-2">
-          Skills
+          {t.skills.kicker}
         </h2>
         <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-12">
-          Technical & Domain Expertise
+          {t.skills.title}
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

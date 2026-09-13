@@ -1,17 +1,18 @@
 import { MapPin, ArrowDown } from 'lucide-react'
-import { personalInfo } from '../data/resume'
-
-const sectionLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#education', label: 'Education' },
-  { href: '#interests', label: 'Beyond Work' },
-  { href: '#contact', label: 'Contact' },
-]
+import { useResume, useT } from '../i18n'
 
 export function Hero() {
+  const { personalInfo } = useResume()
+  const t = useT()
+  const sectionLinks = [
+    { href: '#about', label: t.nav.about },
+    { href: '#experience', label: t.nav.experience },
+    { href: '#skills', label: t.nav.skills },
+    { href: '#projects', label: t.nav.projects },
+    { href: '#education', label: t.nav.education },
+    { href: '#interests', label: t.nav.beyondWork },
+    { href: '#contact', label: t.nav.contact },
+  ]
   return (
     <section id="top" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
       {/* Background gradient */}
@@ -52,19 +53,19 @@ export function Hero() {
             href="#projects"
             className="px-6 py-3 rounded-lg bg-white text-navy-900 font-semibold text-sm hover:bg-navy-100 transition-colors"
           >
-            View Projects
+            {t.hero.viewProjects}
           </a>
           <a
             href="#contact"
             className="px-6 py-3 rounded-lg border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-colors"
           >
-            Get in Touch
+            {t.hero.getInTouch}
           </a>
         </div>
 
         {/* Direct quick-nav to every section */}
         <div className="mt-8">
-          <p className="text-xs uppercase tracking-wider text-navy-400 mb-3">Jump to section</p>
+          <p className="text-xs uppercase tracking-wider text-navy-400 mb-3">{t.hero.jumpToSection}</p>
           <div className="flex flex-wrap gap-2 justify-center">
             {sectionLinks.map((link) => (
               <a

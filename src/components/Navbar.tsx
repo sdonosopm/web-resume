@@ -1,19 +1,21 @@
 import { useState, useRef, useEffect } from 'react'
 import { Moon, Sun, Menu, X, Download, ChevronDown } from 'lucide-react'
+import { useLang, useT } from '../i18n'
+import type { Lang } from '../i18n'
 
 interface NavbarProps {
   isDark: boolean
   toggleDark: () => void
 }
 
-const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#education', label: 'Education' },
-  { href: '#interests', label: 'Beyond Work' },
-  { href: '#contact', label: 'Contact' },
+const navLinks: { href: string; key: keyof ReturnType<typeof useT>['nav'] }[] = [
+  { href: '#about', key: 'about' },
+  { href: '#experience', key: 'experience' },
+  { href: '#skills', key: 'skills' },
+  { href: '#projects', key: 'projects' },
+  { href: '#education', key: 'education' },
+  { href: '#interests', key: 'beyondWork' },
+  { href: '#contact', key: 'contact' },
 ]
 
 const resumeOptions = [
@@ -21,7 +23,35 @@ const resumeOptions = [
   { href: '/Sebastian_Donoso_CV_Espanol.pdf', label: 'Español', sublabel: 'CV (ES)' },
 ]
 
+function LangToggle({ full = false }: { full?: boolean }) {
+  const { lang, setLang } = useLang()
+  const langs: Lang[] = ['en', 'es']
+  return (
+    <div
+      role="group"
+      aria-label="Language"
+      className={`inline-flex items-center rounded-lg border border-[var(--border-color)] bg-[var(--bg-tertiary)] p-0.5 ${full ? 'w-full' : ''}`}
+    >
+      {langs.map((l) => (
+        <button
+          key={l}
+          onClick={() => setLang(l)}
+          aria-pressed={lang === l}
+          className={`px-2.5 py-1 text-xs font-semibold rounded-md transition-colors ${full ? 'flex-1' : ''} ${
+            lang === l
+              ? 'bg-[var(--accent)] text-white'
+              : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
+          }`}
+        >
+          {l.toUpperCase()}
+        </button>
+      ))}
+    </div>
+  )
+}
+
 function ResumeButton({ full = false }: { full?: boolean }) {
+  const t = useT()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -42,7 +72,7 @@ function ResumeButton({ full = false }: { full?: boolean }) {
         className={`inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg bg-[var(--accent)] text-white hover:opacity-90 transition-opacity ${full ? 'w-full justify-center' : ''}`}
       >
         <Download size={14} />
-        Resume PDF
+        {t.common.resumePdf}
         <ChevronDown size={14} className={`transition-transform ${open ? 'rotate-180' : ''}`} />
       </button>
 
@@ -72,6 +102,7 @@ function ResumeButton({ full = false }: { full?: boolean }) {
 }
 
 export function Navbar({ isDark, toggleDark }: NavbarProps) {
+  const t = useT()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
@@ -89,7 +120,7 @@ export function Navbar({ isDark, toggleDark }: NavbarProps) {
               href={link.href}
               className="text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
             >
-              {link.label}
+              {t.nav[link.key]}
             </a>
           ))}
         </div>
@@ -105,6 +136,10 @@ export function Navbar({ isDark, toggleDark }: NavbarProps) {
 
           <div className="hidden md:block">
             <ResumeButton />
+          </div>
+
+          <div className="hidden md:block">
+            <LangToggle />
           </div>
 
           <button
@@ -126,11 +161,12 @@ export function Navbar({ isDark, toggleDark }: NavbarProps) {
               onClick={() => setMobileOpen(false)}
               className="block py-2 text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text-primary)]"
             >
-              {link.label}
+              {t.nav[link.key]}
             </a>
           ))}
-          <div className="mt-3">
+          <div className="mt-3 flex flex-col gap-3">
             <ResumeButton full />
+            <LangToggle full />
           </div>
         </div>
       )}

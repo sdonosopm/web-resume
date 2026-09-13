@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import { Mail, MapPin, Phone, Send, X } from 'lucide-react'
 import { LinkedinIcon } from './icons'
-import { personalInfo } from '../data/resume'
 import { BackToTop } from './BackToTop'
+import { useResume, useT } from '../i18n'
 
 export function Contact() {
+  const { personalInfo } = useResume()
+  const t = useT()
   const [showForm, setShowForm] = useState(false)
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' })
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(formData.subject || 'Contact from Portfolio')}&body=${encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`)}`
+    const mailtoLink = `mailto:${personalInfo.email}?subject=${encodeURIComponent(formData.subject || t.contact.defaultSubject)}&body=${encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`)}`
     window.location.href = mailtoLink
     setShowForm(false)
     setFormData({ name: '', email: '', subject: '', message: '' })
@@ -21,13 +23,13 @@ export function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-light)] mb-2">
-            Contact
+            {t.contact.kicker}
           </h2>
           <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-            Let's Connect
+            {t.contact.title}
           </h3>
           <p className="text-[var(--text-secondary)] mb-10">
-            Interested in discussing finance, technology, or potential collaboration? I'd love to hear from you.
+            {t.contact.intro}
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
@@ -40,7 +42,7 @@ export function Contact() {
                 <Mail size={20} className="text-[var(--accent-light)]" />
               </div>
               <div>
-                <p className="text-xs text-[var(--text-muted)] mb-0.5">Email</p>
+                <p className="text-xs text-[var(--text-muted)] mb-0.5">{t.contact.emailLabel}</p>
                 <p className="text-sm font-medium text-[var(--text-primary)]">{personalInfo.email}</p>
               </div>
             </button>
@@ -54,7 +56,7 @@ export function Contact() {
                 <Phone size={20} className="text-[var(--accent-light)]" />
               </div>
               <div>
-                <p className="text-xs text-[var(--text-muted)] mb-0.5">Phone</p>
+                <p className="text-xs text-[var(--text-muted)] mb-0.5">{t.contact.phoneLabel}</p>
                 <p className="text-sm font-medium text-[var(--text-primary)]">{personalInfo.phone}</p>
               </div>
             </a>
@@ -70,8 +72,8 @@ export function Contact() {
                 <LinkedinIcon size={20} className="text-[var(--accent-light)]" />
               </div>
               <div>
-                <p className="text-xs text-[var(--text-muted)] mb-0.5">LinkedIn</p>
-                <p className="text-sm font-medium text-[var(--text-primary)]">Profile</p>
+                <p className="text-xs text-[var(--text-muted)] mb-0.5">{t.contact.linkedinLabel}</p>
+                <p className="text-sm font-medium text-[var(--text-primary)]">{t.contact.profileValue}</p>
               </div>
             </a>
           </div>
@@ -92,7 +94,7 @@ export function Contact() {
           <div className="w-full max-w-lg rounded-2xl bg-[var(--bg-primary)] border border-[var(--border-color)] shadow-2xl overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-[var(--border-color)]">
-              <h4 className="text-lg font-semibold text-[var(--text-primary)]">Send a Message</h4>
+              <h4 className="text-lg font-semibold text-[var(--text-primary)]">{t.contact.sendMessage}</h4>
               <button
                 onClick={() => setShowForm(false)}
                 className="p-1.5 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-tertiary)] transition-colors"
@@ -105,49 +107,49 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="p-6 space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">Your Name</label>
+                  <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">{t.contact.yourName}</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-3 py-2 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-color)] text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--accent-light)]"
-                    placeholder="John Smith"
+                    placeholder={t.contact.namePh}
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">Your Email</label>
+                  <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">{t.contact.yourEmail}</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-3 py-2 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-color)] text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--accent-light)]"
-                    placeholder="john@example.com"
+                    placeholder={t.contact.emailPh}
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">Subject</label>
+                <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">{t.contact.subjectLabel}</label>
                 <input
                   type="text"
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full px-3 py-2 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-color)] text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--accent-light)]"
-                  placeholder="Opportunity / Collaboration / Question"
+                  placeholder={t.contact.subjectPh}
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">Message</label>
+                <label className="block text-xs font-medium text-[var(--text-secondary)] mb-1.5">{t.contact.messageLabel}</label>
                 <textarea
                   required
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-3 py-2 rounded-lg bg-[var(--bg-secondary)] border border-[var(--border-color)] text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none focus:border-[var(--accent-light)] resize-none"
-                  placeholder="Hi Sebastián, I'd like to discuss..."
+                  placeholder={t.contact.messagePh}
                 />
               </div>
 
@@ -156,10 +158,10 @@ export function Contact() {
                 className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[var(--accent)] text-white font-medium text-sm hover:opacity-90 transition-opacity"
               >
                 <Send size={16} />
-                Send via Email Client
+                {t.contact.sendBtn}
               </button>
               <p className="text-xs text-[var(--text-muted)] text-center">
-                This will open your default email client with the message pre-filled.
+                {t.contact.formNote}
               </p>
             </form>
           </div>

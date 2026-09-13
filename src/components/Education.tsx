@@ -1,16 +1,18 @@
 import { GraduationCap, Award, Trophy } from 'lucide-react'
-import { education, certifications, awards } from '../data/resume'
 import { BackToTop } from './BackToTop'
+import { useResume, useT } from '../i18n'
 
 export function Education() {
+  const { education, certifications, awards } = useResume()
+  const t = useT()
   return (
     <section id="education" className="py-24 px-6 bg-[var(--bg-primary)]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-light)] mb-2">
-          Education, Certifications & Awards
+          {t.education.kicker}
         </h2>
         <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-12">
-          Academic Background
+          {t.education.title}
         </h3>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -18,7 +20,7 @@ export function Education() {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <GraduationCap size={20} className="text-[var(--accent-light)]" />
-              <h4 className="text-lg font-semibold text-[var(--text-primary)]">Education</h4>
+              <h4 className="text-lg font-semibold text-[var(--text-primary)]">{t.education.eduSubhead}</h4>
             </div>
             <div className="space-y-4">
               {education.map((edu, i) => (
@@ -41,7 +43,7 @@ export function Education() {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <Award size={20} className="text-[var(--accent-light)]" />
-              <h4 className="text-lg font-semibold text-[var(--text-primary)]">Certifications</h4>
+              <h4 className="text-lg font-semibold text-[var(--text-primary)]">{t.education.certsSubhead}</h4>
             </div>
             <div className="space-y-3">
               {certifications.map((cert, i) => (
@@ -69,7 +71,7 @@ export function Education() {
           <div className="mt-8">
             <div className="flex items-center gap-2 mb-6">
               <Trophy size={20} className="text-[var(--accent-light)]" />
-              <h4 className="text-lg font-semibold text-[var(--text-primary)]">Awards & Recognition</h4>
+              <h4 className="text-lg font-semibold text-[var(--text-primary)]">{t.education.awardsTitle}</h4>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {awards.map((award, i) => (
@@ -96,7 +98,7 @@ export function Education() {
                       </span>
                     )}
                     {award.project && (
-                      <p className="text-xs text-[var(--text-muted)] mt-2">Project: {award.project}</p>
+                      <p className="text-xs text-[var(--text-muted)] mt-2">{t.education.projectLabel} {award.project}</p>
                     )}
                     {award.detail && (
                       <p className="text-sm text-[var(--text-secondary)] mt-2">{award.detail}</p>

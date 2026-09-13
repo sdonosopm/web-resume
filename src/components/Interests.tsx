@@ -1,6 +1,7 @@
 import { Footprints, Medal, Mountain, Bike, Volleyball, Piano, Waves, MapPin, Calendar, Trophy } from 'lucide-react'
-import { disciplines, otherInterests, type Discipline, type Interest } from '../data/resume'
+import { type Discipline, type Interest } from '../data/resume'
 import { BackToTop } from './BackToTop'
+import { useResume, useT } from '../i18n'
 
 const disciplineIconMap: Record<Discipline['icon'], typeof Footprints> = {
   spartan: Trophy,
@@ -22,18 +23,19 @@ const interestIconMap: Record<Interest['icon'], typeof Footprints> = {
 }
 
 export function Interests() {
+  const { disciplines, otherInterests } = useResume()
+  const t = useT()
   return (
     <section id="interests" className="py-24 px-6 bg-[var(--bg-secondary)]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-light)] mb-2">
-          Beyond Work
+          {t.interests.kicker}
         </h2>
         <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-          Endurance & Interests
+          {t.interests.title}
         </h3>
         <p className="text-[var(--text-secondary)] mb-10 max-w-2xl">
-          The same discipline, goal-setting, and resilience that drive endurance sports also shape
-          how I approach portfolio management and client relationships.
+          {t.interests.intro}
         </p>
 
         {/* Race history by discipline */}
@@ -55,7 +57,7 @@ export function Interests() {
                       {discipline.label}
                     </h4>
                     <p className="text-xs text-[var(--text-muted)]">
-                      {discipline.races.length} event{discipline.races.length > 1 ? 's' : ''}
+                      {discipline.races.length} {discipline.races.length > 1 ? t.interests.events : t.interests.event}
                     </p>
                   </div>
                 </div>

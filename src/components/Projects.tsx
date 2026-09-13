@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { LineChart, Building2, LayoutGrid, Play } from 'lucide-react'
-import { projects, type Project, type ProjectCategory } from '../data/resume'
+import { type Project, type ProjectCategory } from '../data/resume'
 import { VideoModal } from './VideoModal'
 import { BackToTop } from './BackToTop'
+import { useResume, useT, type UIStrings } from '../i18n'
 
 const categoryIcons = {
   finance: LineChart,
@@ -10,15 +11,15 @@ const categoryIcons = {
   other: LayoutGrid,
 }
 
-const categoryLabels = {
-  finance: 'Finance',
-  'real-estate': 'Real Estate',
-  other: 'Others',
-}
-
 const filters = ['all', 'finance', 'real-estate', 'other'] as const
 
+function catLabel(c: ProjectCategory, t: UIStrings): string {
+  return c === 'finance' ? t.projects.catFinance : c === 'real-estate' ? t.projects.catRealEstate : t.projects.catOther
+}
+
 export function Projects() {
+  const t = useT()
+  const { projects } = useResume()
   const [filter, setFilter] = useState<string>('all')
   const [activeVideo, setActiveVideo] = useState<{ id: string; title: string } | null>(null)
 
@@ -28,13 +29,13 @@ export function Projects() {
     <section id="projects" className="py-24 px-6 bg-[var(--bg-secondary)]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-light)] mb-2">
-          Portfolio
+          {t.projects.kicker}
         </h2>
         <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
-          Featured Projects
+          {t.projects.title}
         </h3>
         <p className="text-[var(--text-secondary)] mb-8 max-w-2xl">
-          A selection of platforms I've built across finance, real estate, and other industries.
+          {t.projects.intro}
         </p>
 
         {/* Filter tabs */}
@@ -49,7 +50,7 @@ export function Projects() {
                   : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
               }`}
             >
-              {f === 'all' ? 'All Projects' : categoryLabels[f]}
+              {f === 'all' ? t.projects.filterAll : catLabel(f, t)}
             </button>
           ))}
         </div>
@@ -86,6 +87,7 @@ function ProjectCard({
   project: Project
   onPlayVideo: (videoId: string, title: string) => void
 }) {
+  const t = useT()
   const Icon = categoryIcons[project.categories[0]]
   const hasVideo = Boolean(project.videoId)
 
@@ -114,18 +116,18 @@ function ProjectCard({
 
         <div className="absolute top-3 right-3 z-20">
           <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-white/10 text-navy-200 backdrop-blur-sm">
-            {project.categories.map((c) => categoryLabels[c]).join(' · ')}
+            {project.categories.map((c) => catLabel(c, t)).join(' · ')}
           </span>
         </div>
         {project.hasDemo && (
           <div className="absolute top-3 left-3 z-20">
             {hasVideo ? (
               <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-green-500/20 text-green-300 backdrop-blur-sm">
-                Video Demo
+                {t.projects.videoDemo}
               </span>
             ) : (
               <span className="px-2.5 py-1 text-xs font-semibold rounded-full bg-amber-500/20 text-amber-300 backdrop-blur-sm">
-                Demo Soon
+                {t.projects.demoSoon}
               </span>
             )}
           </div>
@@ -153,12 +155,12 @@ function ProjectCard({
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-1.5">
-          {project.tech.map((t) => (
+          {project.tech.map((tech) => (
             <span
-              key={t}
+              key={tech}
               className="px-2 py-0.5 text-[11px] font-medium rounded bg-[var(--bg-tertiary)] text-[var(--text-muted)]"
             >
-              {t}
+              {tech}
             </span>
           ))}
         </div>
@@ -172,7 +174,7 @@ function ProjectCard({
             className="flex items-center gap-1.5 text-xs font-semibold text-[var(--accent-light)] hover:underline"
           >
             <Play size={12} fill="currentColor" />
-            Watch Demo
+            {t.projects.watchDemo}
           </button>
         )}
       </div>

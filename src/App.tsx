@@ -4,11 +4,13 @@ import { MonedaNavDemo } from './pages/demos/MonedaNavDemo'
 import { WealthPlatDemo } from './pages/demos/WealthPlatDemo'
 import { FixedIncomeDemo } from './pages/demos/FixedIncomeDemo'
 import { useDarkMode } from './hooks/useDarkMode'
+import { LanguageProvider } from './i18n'
 
 function App() {
   const [isDark, setIsDark] = useDarkMode()
 
   return (
+    <LanguageProvider>
     <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
       <Routes>
         <Route path="/" element={<HomePage isDark={isDark} toggleDark={() => setIsDark(!isDark)} />} />
@@ -17,6 +19,7 @@ function App() {
         <Route path="/demos/fixed-income" element={<FixedIncomeDemo />} />
       </Routes>
     </div>
+    </LanguageProvider>
   )
 }
 

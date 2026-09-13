@@ -1,16 +1,18 @@
 import { Briefcase, MapPin } from 'lucide-react'
-import { experience } from '../data/resume'
 import { BackToTop } from './BackToTop'
+import { useResume, useT } from '../i18n'
 
 export function Experience() {
+  const { experience } = useResume()
+  const t = useT()
   return (
     <section id="experience" className="py-24 px-6 bg-[var(--bg-secondary)]">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-light)] mb-2">
-          Experience
+          {t.experience.kicker}
         </h2>
         <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-12">
-          Professional Background
+          {t.experience.title}
         </h3>
 
         <div className="relative">
