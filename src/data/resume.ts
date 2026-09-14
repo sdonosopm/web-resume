@@ -137,10 +137,10 @@ export const projects: Project[] = [
   },
   {
     title: "Chilean Investment Fund Platform",
-    description: "Monitoring platform for the Chilean investment fund market. Sources daily NAV data from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, covering 72 funds with 159K+ records and professional analytics dashboards.",
-    tech: ["Fund Analytics", "CMF Data", "Bolsa Electrónica", "NAV Tracking", "Trading Signals", "Market Data"],
+    description: "Monitoring platform for the entire Chilean investment fund industry. Sources daily NAV from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, mapping 149 funds with 790K+ NAV records spanning 30+ years, across ten analytics panels from screening to reporting.",
+    tech: ["Fund Analytics", "CMF Data", "Fund Screening", "NAV Tracking", "Peer Analysis", "Reporting"],
     categories: ["finance"],
-    highlights: ["72 funds tracked with daily NAV data from CMF", "NAV vs Bolsa Electrónica premium/discount analysis", "Bollinger bands, moving averages & trading signals", "Fund comparison with base-100 normalization", "Order generation with limit prices & email drafts", "159K+ historical records across all funds"],
+    highlights: ["149 Chilean funds mapped from CMF, 790K+ daily NAV records", "Fund Screening panel to filter & rank the fund universe", "Peer Analysis with multi-period returns & subcategory heatmaps", "NAV vs Bolsa Electrónica premium/discount analysis", "Reports, Deals & Opportunities, and order generation", "Asset classification, holdings & data-quality controls"],
     hasDemo: true,
     demoPath: "/demos/moneda-nav",
     videoId: "", // TODO: Paste YouTube video ID here once uploaded
