@@ -1,20 +1,20 @@
 import { useState } from 'react'
-import { LineChart, Building2, LayoutGrid, Play } from 'lucide-react'
+import { Monitor, FileText, BarChart3, Play } from 'lucide-react'
 import { type Project, type ProjectCategory } from '../data/resume'
 import { VideoModal } from './VideoModal'
 import { BackToTop } from './BackToTop'
 import { useResume, useT, type UIStrings } from '../i18n'
 
 const categoryIcons = {
-  finance: LineChart,
-  'real-estate': Building2,
-  other: LayoutGrid,
+  'web-app': Monitor,
+  research: FileText,
+  data: BarChart3,
 }
 
-const filters = ['all', 'finance', 'real-estate', 'other'] as const
+const ALL_CATEGORIES: ProjectCategory[] = ['web-app', 'research', 'data']
 
 function catLabel(c: ProjectCategory, t: UIStrings): string {
-  return c === 'finance' ? t.projects.catFinance : c === 'real-estate' ? t.projects.catRealEstate : t.projects.catOther
+  return c === 'web-app' ? t.projects.catWebApp : c === 'research' ? t.projects.catResearch : t.projects.catData
 }
 
 export function Projects() {
@@ -22,6 +22,10 @@ export function Projects() {
   const { projects } = useResume()
   const [filter, setFilter] = useState<string>('all')
   const [activeVideo, setActiveVideo] = useState<{ id: string; title: string } | null>(null)
+
+  // Only offer filter tabs for categories that actually have projects.
+  const presentCategories = ALL_CATEGORIES.filter((c) => projects.some((p) => p.categories.includes(c)))
+  const filterTabs: string[] = ['all', ...presentCategories]
 
   const filtered = filter === 'all' ? projects : projects.filter((p) => p.categories.includes(filter as ProjectCategory))
 
@@ -40,7 +44,7 @@ export function Projects() {
 
         {/* Filter tabs */}
         <div className="flex flex-wrap gap-2 mb-10">
-          {filters.map((f) => (
+          {filterTabs.map((f) => (
             <button
               key={f}
               onClick={() => setFilter(f)}
@@ -50,7 +54,7 @@ export function Projects() {
                   : 'bg-[var(--bg-tertiary)] text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
               }`}
             >
-              {f === 'all' ? t.projects.filterAll : catLabel(f, t)}
+              {f === 'all' ? t.projects.filterAll : catLabel(f as ProjectCategory, t)}
             </button>
           ))}
         </div>
