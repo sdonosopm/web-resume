@@ -37,7 +37,6 @@ const enStrings = {
   interests: {
     kicker: 'Beyond Work',
     title: 'Endurance & Interests',
-    intro: 'The same discipline, goal-setting, and resilience that drive endurance sports also shape how I approach portfolio management and client relationships.',
     event: 'event',
     events: 'events',
   },
@@ -99,7 +98,6 @@ const esStrings: UIStrings = {
   interests: {
     kicker: 'Más allá del trabajo',
     title: 'Deporte e Intereses',
-    intro: 'La misma disciplina, fijación de metas y resiliencia que impulsan los deportes de resistencia moldean también cómo abordo la gestión de portafolios y las relaciones con clientes.',
     event: 'evento',
     events: 'eventos',
   },

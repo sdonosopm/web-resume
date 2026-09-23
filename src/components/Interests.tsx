@@ -31,12 +31,9 @@ export function Interests() {
         <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-light)] mb-2">
           {t.interests.kicker}
         </h2>
-        <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-4">
+        <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-10">
           {t.interests.title}
         </h3>
-        <p className="text-[var(--text-secondary)] mb-10 max-w-2xl">
-          {t.interests.intro}
-        </p>
 
         {/* Race history by discipline */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
