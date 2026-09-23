@@ -40,9 +40,11 @@ export function Hero() {
           {personalInfo.name}
         </h1>
 
-        <p className="text-xl sm:text-2xl font-light text-navy-200 mb-3">
-          {personalInfo.title}
-        </p>
+        {personalInfo.title && (
+          <p className="text-xl sm:text-2xl font-light text-navy-200 mb-3">
+            {personalInfo.title}
+          </p>
+        )}
 
         <p className="text-base sm:text-lg text-navy-300 max-w-xl mx-auto mb-10 leading-relaxed">
           {personalInfo.tagline}

@@ -4,13 +4,13 @@ import type { ResumeData } from './resume'
 export const resumeEs: ResumeData = {
   personalInfo: {
     name: "Sebastián Donoso",
-    title: "Profesional Senior de Inversiones",
+    title: "",
     tagline: "8+ años en gestión de portafolios, asignación de activos y relación con clientes, creando herramientas de data science para wealth management",
     location: "Santiago, Chile · Residencia en EE.UU. en trámite",
     email: "sdonosopm@gmail.com",
     phone: "+569 7620 3147",
     linkedin: "www.linkedin.com/in/sebasti%C3%A1n-donoso-p%C3%A9rez-55915931",
-    summary: `Profesional senior de inversiones con más de 8 años de experiencia en gestión de portafolios y asignación de activos. Trayectoria comprobada supervisando portafolios multiactivos para clientes UHNW, con sólida experiencia en estrategia de inversión, selección de fondos y análisis de desempeño. Altamente analítico y disciplinado, con visión comercial y sólido conocimiento en consultoría e implementación de IA para wealth management. Bilingüe en inglés y español. Residencia estadounidense en trámite.`,
+    summary: `Profesional con más de 8 años de experiencia en gestión de portafolios y asignación de activos. Trayectoria comprobada supervisando portafolios multiactivos para clientes UHNW, con sólida experiencia en estrategia de inversión, selección de fondos y análisis de desempeño. Altamente analítico y disciplinado, con visión comercial y sólido conocimiento en consultoría e implementación de IA para wealth management. Bilingüe en inglés y español. Residencia estadounidense en trámite.`,
   },
 
   experience: [
