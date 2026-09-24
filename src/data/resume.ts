@@ -1,13 +1,13 @@
 export const personalInfo = {
   name: "Sebastián Donoso",
   title: "",
-  tagline: "8+ years in portfolio management, asset allocation & client relationships, building data science tools for wealth management",
+  tagline: "8+ years in portfolio management, asset allocation & client relationships, passionate about developing technology solutions for wealth management",
   location: "Santiago, Chile · U.S. Residency in process",
   email: "sdonosopm@gmail.com",
   phone: "+569 7620 3147",
   linkedin: "www.linkedin.com/in/sebasti%C3%A1n-donoso-p%C3%A9rez-55915931",
 
-  summary: `Professional with 8+ years of experience in portfolio management and asset allocation. Proven track record overseeing multi-asset portfolios for UHNW clients, with strong expertise in investment strategy, fund selection, and performance analysis. Highly disciplined, with strategic vision and strong knowledge in implementing centralized artificial-intelligence solutions for wealth management. Bilingual in English and Spanish. U.S. residency in process.`,
+  summary: `Professional with 8+ years of experience in portfolio management and asset allocation. Proven track record overseeing multi-asset portfolios for UHNW clients, with strong expertise in investment strategy, fund selection, and performance analysis. Highly disciplined, with client focus and strong knowledge in implementing centralized artificial-intelligence solutions for wealth management. Bilingual in English and Spanish. U.S. residency in process.`,
 }
 
 export interface Experience {
