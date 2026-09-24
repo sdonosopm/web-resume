@@ -7,7 +7,7 @@ export const personalInfo = {
   phone: "+569 7620 3147",
   linkedin: "www.linkedin.com/in/sebasti%C3%A1n-donoso-p%C3%A9rez-55915931",
 
-  summary: `Professional with 8+ years of experience in portfolio management and asset allocation. Proven track record overseeing multi-asset portfolios for UHNW clients, with strong expertise in investment strategy, fund selection, and performance analysis. Highly analytical and disciplined, with a commercial acumen and strong knowledge in AI consulting and implementation for wealth management. Bilingual in English and Spanish. U.S. residency in process.`,
+  summary: `Professional with 8+ years of experience in portfolio management and asset allocation. Proven track record overseeing multi-asset portfolios for UHNW clients, with strong expertise in investment strategy, fund selection, and performance analysis. Highly disciplined, with strategic vision and strong knowledge in implementing centralized artificial-intelligence solutions for wealth management. Bilingual in English and Spanish. U.S. residency in process.`,
 }
 
 export interface Experience {
