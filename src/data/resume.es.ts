@@ -77,6 +77,7 @@ export const resumeEs: ResumeData = {
   projects: [
     {
       title: "Plataforma para Multi-Family Offices",
+      image: "/images/mfo-platform.png",
       description: "Plataforma de reportería white-label para Multi-Family Offices y sus clientes finales. Consolida portafolios entre custodios, monitorea posiciones, calcula métricas de desempeño (TWR, IRR, Sharpe) y entrega dashboards por rol para asesores y clientes.",
       tech: ["Wealth Management", "Analítica de Portafolios", "Multi-Custodio", "White Label", "Reportería", "Compliance"],
       categories: ["web-app"],
@@ -107,6 +108,7 @@ export const resumeEs: ResumeData = {
     },
     {
       title: "Agente de IA Autónomo",
+      image: "/images/jarvis-agent.png",
       description: "Agente de IA autónomo en la nube que entiende lenguaje natural por voz o chat, planifica tareas de varios pasos y las ejecuta a través de herramientas conectadas — impulsado por modelos de lenguaje (LLMs), con memoria persistente, research con fuentes citadas y confirmación con supervisión humana antes de cualquier acción que envíe, escriba, agende o gaste. Lee y actúa sobre correo, calendario, archivos y market data en vivo, y entrega briefings y alertas proactivas — un solo agente que se integra a cualquier flujo de trabajo.",
       tech: ["Agente Autónomo", "LLMs", "Voz y Chat", "Orquestación de Agentes", "Uso de Herramientas (MCP)", "Nube"],
       categories: ["web-app"],
@@ -116,6 +118,7 @@ export const resumeEs: ResumeData = {
     },
     {
       title: "Plataforma de Inteligencia Inmobiliaria",
+      image: "/images/realestate-platform.png",
       description: "Plataforma integral para inversión inmobiliaria que sirve tanto a inversionistas retail como institucionales: originación de deals y pipeline comercial, underwriting con modelamiento de cap rate y CAPEX, CRM de inversionistas, inventario de propiedades y memos de inversión autogenerados — todo alimentando dashboards de management.",
       tech: ["Inmobiliario", "Retail e Institucional", "Underwriting", "Pipeline de Deals", "CRM de Inversionistas", "Modelamiento de Cap Rate"],
       categories: ["web-app"],
@@ -125,6 +128,7 @@ export const resumeEs: ResumeData = {
     },
     {
       title: "Pub Plat — Gestión de Cadenas de Restaurantes y Pubs",
+      image: "/images/pubplat.png",
       description: "Plataforma de operaciones centralizada para cadenas de restaurantes y pubs. Reúne rentabilidad de menú, inventario y mermas, ventas y cuadre de caja, compras, gestión de turnos y fidelización de clientes en un único dashboard multi-local con alertas inteligentes.",
       tech: ["Operaciones Gastronómicas", "Multi-Local", "Rentabilidad de Menú", "Inventario y Mermas", "POS y Ventas", "React/TypeScript"],
       categories: ["web-app"],

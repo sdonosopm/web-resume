@@ -120,6 +120,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: "Multi-Family Office Platform",
+    image: "/images/mfo-platform.png",
     description: "White-label reporting platform for Multi-Family Offices and their end clients. Consolidates portfolios across custodians, tracks holdings, calculates performance metrics (TWR, IRR, Sharpe), and delivers role-based dashboards for advisors and clients.",
     tech: ["Wealth Management", "Portfolio Analytics", "Multi-Custodian", "White Label", "Reporting", "Compliance"],
     categories: ["web-app"],
@@ -150,6 +151,7 @@ export const projects: Project[] = [
   },
   {
     title: "Autonomous AI Agent",
+    image: "/images/jarvis-agent.png",
     description: "Cloud-based autonomous AI agent that understands natural language by voice or chat, plans multi-step tasks, and executes them across connected tools — powered by large language models, with persistent memory, cited research, and a human-in-the-loop confirmation gate before any action that sends, writes, schedules or spends. It reads and acts on email, calendar, files and live market data, and delivers proactive briefings and alerts — a single agent that plugs into any workflow.",
     tech: ["Autonomous Agent", "LLMs", "Voice & Chat", "Agent Orchestration", "Tool Use (MCP)", "Cloud"],
     categories: ["web-app"],
@@ -159,6 +161,7 @@ export const projects: Project[] = [
   },
   {
     title: "Real Estate Intelligence Platform",
+    image: "/images/realestate-platform.png",
     description: "All-in-one platform for real estate investment serving both retail and institutional investors: deal sourcing and commercial pipeline, underwriting with cap-rate and CAPEX modeling, investor CRM, property inventory, and auto-generated investment memos — all feeding management dashboards.",
     tech: ["Real Estate", "Retail & Institutional", "Underwriting", "Deal Pipeline", "Investor CRM", "Cap Rate Modeling"],
     categories: ["web-app"],
@@ -168,6 +171,7 @@ export const projects: Project[] = [
   },
   {
     title: "Pub Plat — Restaurant & Pub Chain Management",
+    image: "/images/pubplat.png",
     description: "Centralized operations platform for restaurant and pub chains. Brings menu profitability, inventory & waste, sales and cash reconciliation, purchasing, staff scheduling, and customer loyalty into a single multi-location dashboard with intelligent alerts.",
     tech: ["Restaurant Ops", "Multi-Location", "Menu Profitability", "Inventory & Waste", "POS & Sales", "React/TypeScript"],
     categories: ["web-app"],
