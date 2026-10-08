@@ -96,12 +96,13 @@ export const resumeEs: ResumeData = {
     },
     {
       title: "Plataforma de Fondos de Inversión Chilenos",
-      description: "Plataforma de monitoreo de toda la industria de fondos de inversión chilena. Obtiene valor cuota (NAV) diario desde la CMF (Comisión para el Mercado Financiero) y precios de la Bolsa Electrónica de Chile, mapeando 149 fondos con más de 790K registros de NAV (30+ años), en diez paneles analíticos que van del screening a la reportería.",
+      description: "Plataforma de monitoreo de toda la industria de fondos de inversión chilena. Obtiene valor cuota (NAV) diario desde la CMF (Comisión para el Mercado Financiero) y precios de la Bolsa Electrónica de Chile, mapeando 889 fondos con más de 1.75M registros de NAV (30+ años), en diez paneles analíticos que van del screening a la reportería.",
       tech: ["Analítica de Fondos", "Datos CMF", "Screening de Fondos", "Seguimiento NAV", "Peer Analysis", "Reportería"],
       categories: ["web-app"],
-      highlights: ["149 fondos chilenos mapeados desde la CMF, 790K+ registros de NAV diario", "Panel de Screening para filtrar y rankear el universo de fondos", "Peer Analysis con retornos multi-período y heatmaps por subcategoría", "Análisis de premio/descuento NAV vs Bolsa Electrónica", "Reportería, Negocios y Oportunidades, y generación de órdenes", "Clasificación de activos, holdings y controles de calidad de datos"],
+      highlights: ["889 fondos chilenos mapeados desde la CMF, 1.75M+ registros de NAV diario", "Panel de Screening para filtrar y rankear el universo de fondos", "Peer Analysis con retornos multi-período y heatmaps por subcategoría", "Análisis de premio/descuento NAV vs Bolsa Electrónica", "Reportería, Negocios y Oportunidades, y generación de órdenes", "Clasificación de activos, holdings y controles de calidad de datos"],
       hasDemo: false,
       demoPath: "/demos/moneda-nav",
+      image: "/images/cfi-platform.png",
       videoId: "",
     },
     {

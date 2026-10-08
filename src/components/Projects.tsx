@@ -114,6 +114,15 @@ function ProjectCard({
               <Play size={22} className="text-[#1e3a5f] ml-1" fill="#1e3a5f" />
             </div>
           </>
+        ) : project.image ? (
+          <>
+            <img
+              src={project.image}
+              alt={`${project.title} preview`}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black/40" />
+          </>
         ) : (
           <Icon size={40} className="text-navy-300 group-hover:text-white transition-colors" />
         )}

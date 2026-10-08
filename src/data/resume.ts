@@ -110,6 +110,8 @@ export interface Project {
   highlights: string[]
   hasDemo: boolean
   demoPath?: string
+  // Optional header image (path under /public), shown in the card's blue header.
+  image?: string
   // YouTube video ID (the part after v= in the URL). Leave empty until you upload.
   // Example: for https://youtu.be/dQw4w9WgXcQ -> videoId: "dQw4w9WgXcQ"
   videoId?: string
@@ -137,12 +139,13 @@ export const projects: Project[] = [
   },
   {
     title: "Chilean Investment Fund Platform",
-    description: "Monitoring platform for the entire Chilean investment fund industry. Sources daily NAV from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, mapping 149 funds with 790K+ NAV records spanning 30+ years, across ten analytics panels from screening to reporting.",
+    description: "Monitoring platform for the entire Chilean investment fund industry. Sources daily NAV from CMF (Comisión para el Mercado Financiero) and exchange prices from Bolsa Electrónica de Chile, mapping 889 funds with 1.75M+ NAV records spanning 30+ years, across ten analytics panels from screening to reporting.",
     tech: ["Fund Analytics", "CMF Data", "Fund Screening", "NAV Tracking", "Peer Analysis", "Reporting"],
     categories: ["web-app"],
-    highlights: ["149 Chilean funds mapped from CMF, 790K+ daily NAV records", "Fund Screening panel to filter & rank the fund universe", "Peer Analysis with multi-period returns & subcategory heatmaps", "NAV vs Bolsa Electrónica premium/discount analysis", "Reports, Deals & Opportunities, and order generation", "Asset classification, holdings & data-quality controls"],
+    highlights: ["889 Chilean funds mapped from CMF, 1.75M+ daily NAV records", "Fund Screening panel to filter & rank the fund universe", "Peer Analysis with multi-period returns & subcategory heatmaps", "NAV vs Bolsa Electrónica premium/discount analysis", "Reports, Deals & Opportunities, and order generation", "Asset classification, holdings & data-quality controls"],
     hasDemo: false,
     demoPath: "/demos/moneda-nav",
+    image: "/images/cfi-platform.png",
     videoId: "",
   },
   {
