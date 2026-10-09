@@ -8,6 +8,7 @@ export function Hero() {
     { href: '#about', label: t.nav.about },
     { href: '#experience', label: t.nav.experience },
     { href: '#skills', label: t.nav.skills },
+    { href: '#company', label: t.nav.company },
     { href: '#projects', label: t.nav.projects },
     { href: '#education', label: t.nav.education },
     { href: '#interests', label: t.nav.beyondWork },

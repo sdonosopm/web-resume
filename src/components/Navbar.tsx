@@ -12,6 +12,7 @@ const navLinks: { href: string; key: keyof ReturnType<typeof useT>['nav'] }[] = 
   { href: '#about', key: 'about' },
   { href: '#experience', key: 'experience' },
   { href: '#skills', key: 'skills' },
+  { href: '#company', key: 'company' },
   { href: '#projects', key: 'projects' },
   { href: '#education', key: 'education' },
   { href: '#interests', key: 'beyondWork' },

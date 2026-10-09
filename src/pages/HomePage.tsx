@@ -3,6 +3,7 @@ import { Hero } from '../components/Hero'
 import { About } from '../components/About'
 import { Experience } from '../components/Experience'
 import { Skills } from '../components/Skills'
+import { Company } from '../components/Company'
 import { Projects } from '../components/Projects'
 import { Education } from '../components/Education'
 import { Interests } from '../components/Interests'
@@ -22,6 +23,7 @@ export function HomePage({ isDark, toggleDark }: HomePageProps) {
       <About />
       <Experience />
       <Skills />
+      <Company />
       <Projects />
       <Education />
       <Interests />

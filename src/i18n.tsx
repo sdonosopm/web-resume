@@ -6,9 +6,16 @@ export type Lang = 'en' | 'es'
 
 // ---- UI (chrome) strings ------------------------------------------------
 const enStrings = {
-  nav: { about: 'About', experience: 'Experience', skills: 'Skills', projects: 'Projects', education: 'Education', beyondWork: 'Beyond Work', contact: 'Contact' },
+  nav: { about: 'About', experience: 'Experience', skills: 'Skills', company: 'Company', projects: 'Projects', education: 'Education', beyondWork: 'Beyond Work', contact: 'Contact' },
   common: { resumePdf: 'Resume PDF', backToTop: 'Back to top' },
   hero: { jumpToSection: 'Jump to section', viewProjects: 'View Projects', getInTouch: 'Get in Touch' },
+  company: {
+    kicker: 'My Venture',
+    founder: 'Founder',
+    tagline: 'We centralize your business into a platform built to measure.',
+    description: "AI Centralized Solutions builds custom software and AI agents that centralize a business's data and external-provider information into a single tailored platform — focused on the financial and real-estate industries.",
+    sectors: ['Financial Industry', 'Real Estate', 'Investment Funds (public data)', 'Fixed Income', 'Process Automation', 'Custom Software'],
+  },
   about: {
     kicker: 'About',
     title: 'Profile Summary',
@@ -67,9 +74,16 @@ const enStrings = {
 export type UIStrings = typeof enStrings
 
 const esStrings: UIStrings = {
-  nav: { about: 'Perfil', experience: 'Experiencia', skills: 'Habilidades', projects: 'Proyectos', education: 'Educación', beyondWork: 'Más allá del trabajo', contact: 'Contacto' },
+  nav: { about: 'Perfil', experience: 'Experiencia', skills: 'Habilidades', company: 'Empresa', projects: 'Proyectos', education: 'Educación', beyondWork: 'Más allá del trabajo', contact: 'Contacto' },
   common: { resumePdf: 'CV PDF', backToTop: 'Volver arriba' },
   hero: { jumpToSection: 'Ir a la sección', viewProjects: 'Ver Proyectos', getInTouch: 'Contáctame' },
+  company: {
+    kicker: 'Mi Sociedad',
+    founder: 'Fundador',
+    tagline: 'Centralizamos tu negocio en una plataforma a tu medida.',
+    description: 'AI Centralized Solutions construye software a la medida y agentes de IA que centralizan los datos del negocio y la información de proveedores externos en una sola plataforma personalizada — con foco en la industria financiera e inmobiliaria.',
+    sectors: ['Industria Financiera', 'Inmobiliario', 'Fondos de Inversión (datos públicos)', 'Renta Fija', 'Automatización de Procesos', 'Software a la Medida'],
+  },
   about: {
     kicker: 'Perfil',
     title: 'Resumen Profesional',
