@@ -9,15 +9,18 @@ export function Company() {
         <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-light)] mb-2">
           {t.company.kicker}
         </h2>
+        <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-8">
+          {t.company.title}
+        </h3>
 
         <div className="rounded-2xl border border-[var(--border-color)] bg-[var(--bg-primary)] p-8 md:p-10 shadow-sm">
-          <div className="flex flex-col md:flex-row md:items-center gap-8">
+          <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-10">
             {/* Logo — white container so it reads in light & dark themes */}
-            <div className="shrink-0 rounded-xl bg-white border border-[var(--border-color)] p-5 flex items-center justify-center">
+            <div className="shrink-0 rounded-xl bg-white border border-[var(--border-color)] px-6 py-5 flex items-center justify-center">
               <img
                 src="/images/ai-centralized-solutions-logo.png"
                 alt="AI Centralized Solutions"
-                className="h-14 md:h-16 w-auto"
+                className="h-24 md:h-32 w-auto"
               />
             </div>
 

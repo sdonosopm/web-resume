@@ -11,6 +11,7 @@ const enStrings = {
   hero: { jumpToSection: 'Jump to section', viewProjects: 'View Projects', getInTouch: 'Get in Touch' },
   company: {
     kicker: 'My Venture',
+    title: 'Company',
     founder: 'Founder',
     tagline: 'We centralize your business into a platform built to measure.',
     description: "AI Centralized Solutions builds custom software and AI agents that centralize a business's data and external-provider information into a single tailored platform — focused on the financial and real-estate industries.",
@@ -79,6 +80,7 @@ const esStrings: UIStrings = {
   hero: { jumpToSection: 'Ir a la sección', viewProjects: 'Ver Proyectos', getInTouch: 'Contáctame' },
   company: {
     kicker: 'Mi Sociedad',
+    title: 'Empresa',
     founder: 'Fundador',
     tagline: 'Centralizamos tu negocio en una plataforma a tu medida.',
     description: 'AI Centralized Solutions construye software a la medida y agentes de IA que centralizan los datos del negocio y la información de proveedores externos en una sola plataforma personalizada — con foco en la industria financiera e inmobiliaria.',
